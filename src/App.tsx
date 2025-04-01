@@ -14,14 +14,10 @@ function App() {
 					<ButtonsBox>
 						<Button variant="primary">See more</Button>
 						<Button variant="secondary">Save</Button>
-
 					</ButtonsBox>
-					
 				</UnderImageBox>
 			</Container>
 		</Wrapper>
-	
-	
 	);
 }
 
@@ -41,10 +37,13 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: white;
-    width: 300px;
+    max-width: 300px;
+	width: 100%;
     height: 350px;
+	
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+	padding-top: 10px;
 
 `
 const Image = styled.div`
@@ -53,17 +52,17 @@ const Image = styled.div`
     background-size: cover;
     background-position: center;
     height: 170px;
-    width: 280px;
+	min-width: 280px;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+	object-fit: cover;
+
 `
 
 const UnderImageBox = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 20px 20px 0px 20px;
-
+	padding: 20px 20px 0 20px;
 `
 const Title = styled.div`
     font-weight: 700;
@@ -75,13 +74,13 @@ const Description = styled.div`
     font-size: 12px;
     line-height: 1.66667;
     color: #abb3ba;
-	margin-top: 20px;
+	padding-top: 20px;
 `
 
 const ButtonsBox = styled.div`
 	display: flex;
 	gap: 12px;
-	margin-top: 19px;
+	padding-top: 20px;
 `
 
 type ButtonProps = {
@@ -103,6 +102,3 @@ const Button = styled.button<ButtonProps>`
     text-align: center;
     cursor: pointer;
 `
-
-
-
